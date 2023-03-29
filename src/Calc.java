@@ -10,5 +10,6 @@ public class Calc {
         System.out.println(rec.getPerimeter());
         System.out.println(rec.getArea());
         System.out.println(rec.h);
+
     }
 }

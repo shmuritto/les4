@@ -1,19 +1,20 @@
 public abstract class Figure {
-    int a , b, c; //длины сторон
-    float h; //высота
-    float x, y; // координаты центра
+    double a , b, c; //длины сторон
+    double h; //высота
+    double x, y; // координаты центра
 
-    Figure(int a, int b, int c, float h, float x, float y) {
+    Figure(double a, double b, double c, double h, double x, double y) {
         this.a = a;
         this.b = b;
         this.c = c;
         this.h = h;
         this.x = x;
         this.y = y;
+
     }
 
 
-    public abstract float getArea();
-    public abstract float getPerimeter();
+    public abstract double getArea();
+    public abstract double getPerimeter();
 }
 

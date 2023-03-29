@@ -1,16 +1,19 @@
 public class Square extends Figure {
 
-    Square(int a, int b, int c, float h, float x, float y) {
-        super(a, b, c, h, x, y);
+    Square(double a, double b) {
+        super(a, b, 0, b, a/2, b/2);
     }
 
+
     @Override
-    public float getArea() {
+    public double getArea() {
         return a * b;
     }
 
     @Override
-    public float getPerimeter() {
+    public double getPerimeter() {
         return (a + b) * 2;
+
     }
+
 }
