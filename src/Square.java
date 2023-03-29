@@ -13,7 +13,6 @@ public class Square extends Figure {
     @Override
     public double getPerimeter() {
         return (a + b) * 2;
-
     }
 
 }

@@ -10,7 +10,6 @@ public abstract class Figure {
         this.h = h;
         this.x = x;
         this.y = y;
-
     }
 
 
