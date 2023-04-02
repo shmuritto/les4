@@ -1,19 +1,22 @@
 public abstract class Figure {
     double a , b, c; //длины сторон
-    double h; //высота
-    double x, y; // координаты центра
+    //double h; //высота
+    //double x, y;  координаты центра расчитываются позже
 
-    Figure(double a, double b, double c, double h, double x, double y) {
+    Figure(double a, double b, double c) { //для треугольника
         this.a = a;
         this.b = b;
         this.c = c;
-        this.h = h;
-        this.x = x;
-        this.y = y;
     }
 
+    Figure(double a, double b) { //для прямогульника
+        this.a = a;
+        this.b = b;
+    }
 
-    public abstract double getArea();
-    public abstract double getPerimeter();
+    public abstract double getArea(); //вычисление площади
+
+    public abstract double getPerimeter(); //вычисление периметра
+
+
 }
-

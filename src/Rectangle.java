@@ -1,16 +1,43 @@
-public class Rectangle extends Figure{
+public class Rectangle extends Figure implements Draw, Move, High {
 
-    double halfP = (a + b + c) / 2;
-    Rectangle(double a, double b, double c) {
-        super(a, b, c, 2 * Math.sqrt((a + b + c) / 2 * ((a + b + c) / 2 - a) * ((a + b + c) / 2 - b) * ((a + b + c) / 2 - c))/b, a/2, b/2);
-    }
-    @Override
-    public double getArea() {
-        return (Math.sqrt(halfP * (halfP - a) * (halfP - b)*(halfP - c)));
+    Rectangle(double a, double b) {
+        super(a, b);
     }
 
     @Override
-    public double getPerimeter() {
-        return a + b + c;
+    public double getArea() { //вычисление площади прямоугольника
+        return a * b;
+    }
+
+    @Override
+    public double getPerimeter() { //вычисление периметра прямоугольника
+        return (a + b) * 2;
+    }
+
+    @Override
+    public void toDraw() { //вывод координат вершин прямоугольника
+        double[] pointsX = {0, a, a, 0};
+        double[] pointsY = {0, 0, b, b};
+        for (int i = 0; i < pointsX.length; i++) {
+            System.out.println("Координата " + i + " вершины прямоугольника = " + pointsX[i] + " по X, " + pointsY[i] + " по Y.");
+        }
+
+    }
+
+    @Override
+    public void toMove() { //вывод координат вершин прямоугольника при смещении
+        double[] pointsX = {0, a, a, 0};
+        double[] pointsY = {0, 0, b, b};
+        for (int i = 0; i < pointsX.length; i++) {
+            pointsX[i] = pointsX[i] + 10;
+            pointsY[i] = pointsY[i] + 10;
+            System.out.println("Координата " + i + " вершины прямоугольника = " + pointsX[i] + " по X, " + pointsY[i] + " по Y. При смещении на 10 пунктов");
+        }
+    }
+
+    @Override
+    public void toHigh() { //расчет и вывод координат центра примоугольника
+        System.out.println("Координаты центра прямоугольника: " + a / 2 + " по X, " + b / 2 + " по Y.");
     }
 }
+
